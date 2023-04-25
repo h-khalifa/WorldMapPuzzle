@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import FirstPuzzle from './components/FirstPuzzle';
+import SecondPuzzle from './components/SecondPuzzle';
 
 export default function App() {
   return (
-      <FirstPuzzle></FirstPuzzle>
+      <SecondPuzzle></SecondPuzzle>
   );
 }
 

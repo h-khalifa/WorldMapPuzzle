@@ -6,6 +6,7 @@ export function useRandom(maxLength){
     const generateRandom = () => {
         var randNum = Math.round (Math.random() * 100);
         var randIndex = Math.round (randNum * maxLength / 100);
+        randIndex = randIndex % maxLength;
         return randIndex;
     };
 
@@ -23,9 +24,9 @@ export function useRandom(maxLength){
     };
 
     const getInitIndex = () => {
-        if(indexVals.length == 0){
+        if(indexVals.current.length == 0){
             var initIndex = generateRandom();
-            indexVals.current = ([...previousValues,initIndex]); 
+            indexVals.current = ([initIndex]); 
             return initIndex;
         }
     }
