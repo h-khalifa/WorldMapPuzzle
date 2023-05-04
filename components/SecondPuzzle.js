@@ -15,7 +15,7 @@ export default function SecondPuzzle() {
 
   useEffect(() => {
     setPuzzleState({ score: 0, randomIndex: getInitIndex() })
-  },[])
+  }, [])
 
   const countryPress = (cId) => {
     var nextState = puzzleState;
